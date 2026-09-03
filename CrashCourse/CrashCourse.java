@@ -48,19 +48,54 @@ public class CrashCourse {     // class header
          // LOGICAL OPERATORS
          // In order of precedence: ! (not)  && (and)  || (or)
 
-         boolean e = false; boolean f = true; //can define multiple variables on one line
+        boolean f = false; boolean t = true;
 
-         //predict output: 
-       
-         System.out.println(!e); //True
-         System.out.println(e && f); //false
-         System.out.println(e || f); //true
-         System.out.println(e || f && !e); //true
+        // predict output: true or false? 
+        System.out.println(!f);  //true
+        System.out.println(f && t);// false
+        System.out.println(f || t); //true
+        System.out.println(f || t && !f); // true
 
-         System.out.println( e && f); //short circuts after checking e -- java does not need check f)
+        System.out.println(f && t); // short circuits to FALSE after checking f && -- java does not need to check t.
+        System.out.println(t || (f && t)); //short circuits after checking the first t.
 
+        //CASTING (converting)
+        int g = (int)5.5;
+        System.out.println(g);
+        double h = (double)5/6;
+        System.out.println(h);
 
+        //STRINGS
+        String s1 = "Goodnight";
+        String s2 = " and ";
+        String s3 = "Goodbye";
+        String result = s1 + s2 + s3;
+        result += ", Cowboy.";
+        System.out.println(result + "\n");
 
+        //ARRAYS
+        int[] arry1 = new int[10];
+        System.out.println(arry1);
+        System.out.println("length: " + arry1.length);
+
+        arry1[0] = 11; //makes an array of 11 zeroes
+        arry1[1] = 2; //makes an array of 2 ones
+
+        System.out.println("Remainder: " + arry1[0] % arry1[1]);
+
+        int[] arry2 = {34, 52, 3, 64, 32};
+        System.out.println("arry2: " + arry2);
+
+        //2D ARRAYS (grid or table)
+
+        int[][] arryGrid1 = new int[4][3]; //[rows] by [columns]
+        // 0 0 0
+        // 0 0 0
+        // 0 0 0
+        // 0 0 0
+
+        System.out.println("Rows: " + arryGrid1.length);
+        System.out.println("Columns: " + arryGrid1[0].length); //tells you how many elements are in the first row [0 0 0], which is the number of columns
 
 
 
