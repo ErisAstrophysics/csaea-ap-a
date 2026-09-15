@@ -39,6 +39,28 @@ public class ChaoticWizard {
         
     }
 
+    public void forageingredients() {
+        energyLevel -= 10;
+        System.out.println("You've found spell ingredients!");
+    }
+
+    public void foragescrolls() {
+        energyLevel -= 10;
+        System.out.println("You've found a spell scroll!")
+        spellsLearned += 1;
+    }
+
+    public void sleep() {
+        health = 100;
+        energyLevel = 100;
+    }
+
+    public void spellperform() {
+        beardLength += 1.5;
+        
+    }
+
+
 
 
 
