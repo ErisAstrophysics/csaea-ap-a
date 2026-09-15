@@ -35,10 +35,6 @@ public class ChaoticWizard {
         System.out.println("You've hit the enemy!");
     }
 
-    public void takeDamage(){
-        
-    }
-
     public void forageingredients() {
         energyLevel -= 10;
         System.out.println("You've found spell ingredients!");
@@ -58,6 +54,47 @@ public class ChaoticWizard {
     public void spellperform() {
         beardLength += 1.5;
         
+    }
+
+    public void eat() {
+        energyLevel += 10;
+        health += 10;
+    }
+
+    public void commitcrime() {
+        energyLevel -= 20;
+        arrestWarrants += 1;
+    }
+
+    public void birthday() {
+        age += 1;
+        System.out.println("Happy Birthday!");
+    }
+
+    public void location() {
+        energyLevel -= 5;
+        System.out.println("Moved Location");
+    }
+
+    public void study() {
+        intelligence += 5;
+        beardLength += 1.5;
+    }
+
+    public void jail() {
+        arrestWarrants -= 1;
+        intelligence -= 2;
+    }
+
+    public void energy() {
+        if (energyLevel > 100){
+            energyLevel = 100;
+        }
+        if (energyLevel < 0){
+            energyLevel = 0;
+
+
+        }
     }
 
 

@@ -34,7 +34,7 @@ public class Dog {
         }
     }
 
-    public void feed() {
+    public void eat() {
         if (isHungry = true){
             isHungry = false;
             System.out.println("Your dog is full.")
@@ -43,6 +43,11 @@ public class Dog {
         else{
             System.out.println("Your dog is not hungry.");
         }
+    }
+
+    public void birthday() {
+        age += 1;
+        System.out.println("It's your dog's birthday!");
     }
 
     
