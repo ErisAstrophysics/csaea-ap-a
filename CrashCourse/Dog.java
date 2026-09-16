@@ -37,7 +37,7 @@ public class Dog {
     public void eat() {
         if (isHungry = true){
             isHungry = false;
-            System.out.println("Your dog is full.")
+            System.out.println("Your dog is full.");
             weight += 1;
         }
         else{
@@ -50,8 +50,31 @@ public class Dog {
         System.out.println("It's your dog's birthday!");
     }
 
-    
+    public void bark(){
+        System.out.println("BARK");
+    }
 
+    public void scratch(){
+        System.out.println("You've been scratched");
+    }
+
+    public void bite(){
+        System.out.println("You've been bitten!");
+    }
+
+    public void runaway() {
+        isHome = false;
+        energyLevel -= 20;
+    }
+
+    public void comehome() {
+        isHome = true;
+        System.out.println("Your dog has come home!");
+    }
+
+    public void sleep() {
+        energyLevel = 100;
+    }
 
 
 

@@ -42,7 +42,7 @@ public class ChaoticWizard {
 
     public void foragescrolls() {
         energyLevel -= 10;
-        System.out.println("You've found a spell scroll!")
+        System.out.println("You've found a spell scroll!");
         spellsLearned += 1;
     }
 
@@ -53,7 +53,7 @@ public class ChaoticWizard {
 
     public void spellperform() {
         beardLength += 1.5;
-        
+        System.out.println("You've performed a spell!");
     }
 
     public void eat() {
