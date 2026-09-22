@@ -1,3 +1,4 @@
+import module java.base;
 public class FarmerGuy {
     
     // Attributes
@@ -102,3 +103,14 @@ public class FarmerGuy {
 
 
 }
+FarmerGuy arthur = new FarmerGuy("Arthur", "Wheat", "Male");
+FarmerGuy bob = new FarmerGuy("Bob", "Corn", "Male)
+FarmerGuy bob = new FarmerGuy("Bob", "Corn", "Male");
+FarmerGuy cindy = new FarmerGuy("Cindy", "Rice", "Female");
+FarmerGuy donna = new FarmerGuy("Donna", "Soybeans", "Female");
+FarmerGuy ethan = new FarmerGuy("Ethan", "Potatoes", "Male");
+arthur.cropsharvested()
+bob.sleep()
+cindy.birthday()
+donna.buyvehicle()
+ethan.sellcrops()
