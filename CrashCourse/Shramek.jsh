@@ -64,37 +64,10 @@ public class FarmerGuy {
         System.out.println("You've bought a new farming vehicle!");
     }
 
-    // public void throwpicthfork() {
-    //     pitchforksEarned -= 1;
-    //     energyLevel -= 5;
-    //     if (pitchforksEarned <= 0){
-    //         System.out.println("You have no pitchsforks to throw.");
-    //         pitchforksEarned = 0;
-    //     }
-    //     else {
-    //         System.out.println("Pitchfork thrown.");
-    //         pitchforksEarned -= 1;
-    //     }
-    // }
-
     public void sellcrops() {
         money += 25;
         System.out.println("Earned $25.");
     }
-
-    // public void season() {
-    //     System.out.println("It is now: " + season);
-    // }
-
-    // public void checkbalance() {
-    //     if (money < 0){
-    //         System.out.println("Insufficient funds.");
-    //         money = 0;
-    //     }
-    //     else {
-    //         System.out.print("You have: " + money + " dollars.");
-    //     }
-    // }
 
 
 
@@ -104,13 +77,13 @@ public class FarmerGuy {
 
 }
 FarmerGuy arthur = new FarmerGuy("Arthur", "Wheat", "Male");
-FarmerGuy bob = new FarmerGuy("Bob", "Corn", "Male)
 FarmerGuy bob = new FarmerGuy("Bob", "Corn", "Male");
-FarmerGuy cindy = new FarmerGuy("Cindy", "Rice", "Female");
-FarmerGuy donna = new FarmerGuy("Donna", "Soybeans", "Female");
+FarmerGuy cindy = new FarmerGuy("Cindy", "Soybean", "Female");
+FarmerGuy donna = new FarmerGuy("Donna", "Rice", "Female");
 FarmerGuy ethan = new FarmerGuy("Ethan", "Potatoes", "Male");
 arthur.cropsharvested()
 bob.sleep()
 cindy.birthday()
-donna.buyvehicle()
-ethan.sellcrops()
+donna.eat()
+ethan.buyvehicle()
+arthur.sellcrops()
