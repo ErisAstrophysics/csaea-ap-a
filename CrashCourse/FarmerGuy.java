@@ -10,9 +10,10 @@ public class FarmerGuy {
     private boolean isHungry;
     private int cropsHarvested;
     private String season;
-    int pitchforksEarned;
+    private int pitchforksEarned;
     private double money;
-    int farmVehiclesOwned;
+    private int farmVehiclesOwned;
+
 
     // Constructor
     public FarmerGuy(String farmerName, String cropType, String gender){
@@ -35,23 +36,26 @@ public class FarmerGuy {
         }
     }
    
-    public void harvestcrops() {
+    public void cropsharvested() {
         cropsHarvested += 15;
         energyLevel -= 10;
+        System.out.println("Crops Harvested");
     }
 
-    public void sleep(int h = 0; h < 8; h++) {
-        System.out.println(h + " hours slept.");
+    public void sleep() {
         energyLevel = 100;
+        System.out.println("Energy = 100");
     }
     
     public void birthday() {
-        age += 1;
+        age = age + 1;
+        System.out.println("You've Aged");
     }
 
     public void eat() {
         energyLevel += 10;
         isHungry = false;
+        System.out.println("You are now full");
     }
 
     public void buyvehicle() {
