@@ -24,7 +24,7 @@ public class LibraryBook {
     }
 
     //Methods
-    public void checkout(){
+    public void checkOut(){
         if(isCheckedOut = true) {
             isCheckedOut = true;
             System.out.println(bookTitle + " is currently unavailable to check out.");
@@ -39,15 +39,15 @@ public class LibraryBook {
         }
     }
 
-    public void booklength(){
+    public void bookLength(){
         System.out.println(bookTitle + " is " + numberPages + " pages long.");
     }
 
-    public void whatgenre() {
+    public void whatGenre() {
         System.out.println(bookTitle + " is " + genre + ".");
     }
 
-    public void returnbook() {
+    public void returnBook() {
         if(isCheckedOut =  true){
             isCheckedOut = false;
             System.out.println(bookTitle +  " has been returned.");
@@ -59,7 +59,7 @@ public class LibraryBook {
         }
     }
 
-    public void putonhold() {
+    public void putOnHold() {
         if(isCheckedOut = true){
             isOnHold = false;
             System.out.println(bookTitle + " is currently checked out and cannot be put on hold.");
@@ -70,21 +70,21 @@ public class LibraryBook {
         }
     }
 
-    public void returnhold() {
+    public void returnHold() {
         isOnHold = false;
         System.out.println("You have removed your hold on " + bookTitle + ".");
     }
 
-    public void markdamaged() {
+    public void markDamaged() {
         isDamaged = true;
         System.out.println("Thank you for marking " + bookTitle + " as damaged. Our librarians will fix it soon.");
     }
 
-    public void viewrating(){
-        System.out.print(bookTitle + " is rated " + bookRating + " out of 5.0.");
+    public void viewRating(){
+        System.out.print(bookTitle + " is rated " + bookRating + " out of 5.0 stars.");
     }
 
-    public void addrating(double addedRating){
+    public void addRating(double addedRating){
         if (addedRating > 5.0){
             addedRating = 5.0;
             System.out.println("Rating limit is 5.0.");
