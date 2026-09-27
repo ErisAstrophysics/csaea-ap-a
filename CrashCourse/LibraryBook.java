@@ -29,7 +29,7 @@ public class LibraryBook {
             isCheckedOut = true;
             System.out.println(bookTitle + " is currently unavailable to check out.");
         }
-        else if(isOnHold = true){
+        else if(isOnHold = true && isCheckedOut != false){
             isOnHold = true;
             System.out.println("This title is currently on hold and cannot be checked out.");
         }
@@ -55,7 +55,7 @@ public class LibraryBook {
         }
         else{
             isCheckedOut = false;
-            System.out.println("This title was not checked out");
+            System.out.println("This title was not checked out.");
         }
     }
 
@@ -75,9 +75,9 @@ public class LibraryBook {
         System.out.println("You have removed your hold on " + bookTitle + ".");
     }
 
-    public void markDamaged() {
+    public void markDamaged(String damagedPart) {
         isDamaged = true;
-        System.out.println("Thank you for marking " + bookTitle + " as damaged. Our librarians will fix it soon.");
+        System.out.println("Thank you for letting us know that the " + damagedPart + " of " + bookTitle + " is damaged. Our librarians will fix it soon.");
     }
 
     public void viewRating(){
@@ -87,12 +87,12 @@ public class LibraryBook {
     public void addRating(double addedRating){
         if (addedRating > 5.0){
             addedRating = 5.0;
-            System.out.println("Rating limit is 5.0.");
+            System.out.println("Rating limit is 5.0 stars.");
             bookRating = (addedRating + 5.0) / 2;
         }
         else if (addedRating < 0.0){
             addedRating = 0.0;
-            System.out.println("Rating limit is 0.0.");
+            System.out.println("Rating limit is 0.0 stars.");
         }
         else{
             bookRating = (addedRating + 5.0) / 2;
