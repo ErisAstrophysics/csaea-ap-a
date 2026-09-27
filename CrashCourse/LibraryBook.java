@@ -25,7 +25,7 @@ public class LibraryBook {
 
     //Methods
     public void checkOut(){
-        if(isCheckedOut = false) {
+        if(isCheckedOut == false) {
             isCheckedOut = true;
             System.out.println("You have checked out "  + bookTitle + ".");
         }
@@ -44,7 +44,7 @@ public class LibraryBook {
     }
 
     public void returnBook() {
-        if(isCheckedOut =  true){
+        if(isCheckedOut ==  true){
             isCheckedOut = false;
             System.out.println(bookTitle +  " has been returned.");
             System.out.println("Thank you for returning your book!");
@@ -56,7 +56,7 @@ public class LibraryBook {
     }
 
     public void putOnHold() {
-        if(isCheckedOut = false){
+        if(isCheckedOut == false){
             isOnHold = true;
             System.out.println(bookTitle + " has been put on.");
         }
