@@ -29,6 +29,10 @@ public class LibraryBook {
             isCheckedOut = true;
             System.out.println("You have checked out "  + bookTitle + ".");
         }
+        else if(isOnHold == true){
+            System.out.println("This title is currently on hold and cannot be checked out.");
+            isCheckedOut = false;
+        }
         else {
             isCheckedOut = true;
             System.out.println(bookTitle + " is currently unavailable to check out.");
@@ -41,6 +45,10 @@ public class LibraryBook {
 
     public void whatGenre() {
         System.out.println(bookTitle + " is a " + genre + " book.");
+    }
+
+    public void whoWroteThis() {
+        System.out.println(bookTitle + " was written by " + authorName + ".");
     }
 
     public void returnBook() {
@@ -58,7 +66,7 @@ public class LibraryBook {
     public void putOnHold() {
         if(isCheckedOut == false){
             isOnHold = true;
-            System.out.println(bookTitle + " has been put on.");
+            System.out.println(bookTitle + " has been put on hold.");
         }
         else {
             isOnHold = false;
@@ -77,7 +85,7 @@ public class LibraryBook {
     }
 
     public void viewRating(){
-        System.out.print(bookTitle + " is rated " + bookRating + " out of 5.0 stars.");
+        System.out.println(bookTitle + " is rated " + bookRating + " out of 5.0 stars.");
     }
 
     public void addRating(double addedRating){

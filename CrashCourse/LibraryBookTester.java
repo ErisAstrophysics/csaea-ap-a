@@ -7,6 +7,8 @@ public class LibraryBookTester {
         illuminae.checkOut();
         illuminae.bookLength();
         illuminae.whatGenre();
+        illuminae.whoWroteThis();
+        illuminae.putOnHold(); //should say that the book can't be placed on hold, due to it being checked out.
         illuminae.returnBook();
         illuminae.putOnHold();
         illuminae.returnHold();
@@ -17,11 +19,10 @@ public class LibraryBookTester {
         outsiders.checkOut();
         outsiders.bookLength();
         outsiders.whatGenre();
+        outsiders.whoWroteThis();
         outsiders.returnBook();
         outsiders.putOnHold();
-        outsiders.checkOut();
         outsiders.returnHold();
-        outsiders.checkOut();
         outsiders.markDamaged("Spine");
         outsiders.addRating(4.9);
         outsiders.viewRating();
