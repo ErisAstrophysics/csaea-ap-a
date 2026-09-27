@@ -25,17 +25,13 @@ public class LibraryBook {
 
     //Methods
     public void checkOut(){
-        if(isCheckedOut = true) {
+        if(isCheckedOut = false) {
             isCheckedOut = true;
-            System.out.println(bookTitle + " is currently unavailable to check out.");
-        }
-        else if(isOnHold = true && isCheckedOut != false){
-            isOnHold = true;
-            System.out.println("This title is currently on hold and cannot be checked out.");
+            System.out.println("You have checked out "  + bookTitle + ".");
         }
         else {
             isCheckedOut = true;
-            System.out.println("You have checked out "  + bookTitle + ".");
+            System.out.println(bookTitle + " is currently unavailable to check out.");
         }
     }
 
@@ -44,7 +40,7 @@ public class LibraryBook {
     }
 
     public void whatGenre() {
-        System.out.println(bookTitle + " is " + genre + ".");
+        System.out.println(bookTitle + " is a " + genre + " book.");
     }
 
     public void returnBook() {
@@ -60,13 +56,13 @@ public class LibraryBook {
     }
 
     public void putOnHold() {
-        if(isCheckedOut = true){
-            isOnHold = false;
-            System.out.println(bookTitle + " is currently checked out and cannot be put on hold.");
+        if(isCheckedOut = false){
+            isOnHold = true;
+            System.out.println(bookTitle + " has been put on.");
         }
         else {
-            isOnHold = true;
-            System.out.println(bookTitle + " has been put on hold.");
+            isOnHold = false;
+            System.out.println(bookTitle + " is currently unavailable to place on hold.");
         }
     }
 
@@ -99,10 +95,5 @@ public class LibraryBook {
         }
 
     }
-
-
-
-
-
     
 }
