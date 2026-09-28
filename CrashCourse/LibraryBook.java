@@ -23,6 +23,22 @@ public class LibraryBook {
         bookRating = 5.0;
     }
 
+    public String getbookTitle(){
+        System.out.println(bookTitle);
+        return bookTitle;
+    }
+
+    public String getauthorName(){
+        System.out.println(authorName);
+        return authorName;
+    }
+
+    public void setbookTitle(String newTitle){
+        bookTitle = newTitle;
+    }
+
+
+
     //Methods
     public void checkOut(){
         if(isCheckedOut == false) {

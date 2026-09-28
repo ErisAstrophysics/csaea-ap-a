@@ -4,6 +4,9 @@ public class LibraryBookTester {
         LibraryBook illuminae = new LibraryBook("Illuminae", "Amie Kaufman and Jay Kristoff", "Science Fiction", 599);
         LibraryBook outsiders = new LibraryBook("The Outsiders", "S.E. Hinton", "Fiction", 180);
 
+        illuminae.getbookTitle();
+        illuminae.setbookTitle("Gemina");
+        illuminae.getbookTitle();
         illuminae.checkOut();
         illuminae.bookLength();
         illuminae.whatGenre();
