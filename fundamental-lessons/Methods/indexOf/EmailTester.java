@@ -21,6 +21,9 @@ public class EmailTester {
         System.out.println(jojo.getUser());
 
         System.out.println(michael.getDomain());
+        System.out.println(jojo.getDomain());
+
+        System.out.println(michael.getFirstName());
 
 
     }

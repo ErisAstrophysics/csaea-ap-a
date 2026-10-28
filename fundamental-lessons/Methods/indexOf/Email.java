@@ -22,12 +22,25 @@ public class Email {
     }
 
     public String getDomain() {
-        return address.substring(address.indexOf("."), -1);
+        return address.substring(address.indexOf("@") + 1);
     }
 
     public boolean isSchool() {
-        return false;
+        return address.indexOf("hcvsd.org") != -1;
     }
+
+    // public String getFirstName() {
+    //     return address.substring(address.indexOf(0, ));
+    // }
+    // ===== CHALLENGE 1 =====
+// Method name: getFirstName
+// School addresses are formatted first.last@hcvsd.org
+// Return the first name: the part of the user before the ".".
+//     "ana.lee@hcvsd.org" -> "ana"
+// Hint: call getUser() first and store it in a variable.
+// Hint: find the "." in that variable, not in address.
+// Tools: getUser, indexOf, substring
+
 
 
 
