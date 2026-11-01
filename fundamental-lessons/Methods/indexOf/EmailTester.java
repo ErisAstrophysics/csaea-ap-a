@@ -23,7 +23,7 @@ public class EmailTester {
         System.out.println(michael.getDomain());
         System.out.println(jojo.getDomain());
 
-        System.out.println(michael.getFirstName());
+        // System.out.println(michael.getFirstName());
 
 
     }
