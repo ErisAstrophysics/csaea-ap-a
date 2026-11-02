@@ -11,7 +11,7 @@ public class Backpack {
         this.numPockets = numPockets;
 
         numBooks = 0;
-        spaceLeft = 1500;
+        spaceLeft = numPockets * 250;
         isWorn = false;
     }
 
@@ -25,6 +25,27 @@ public class Backpack {
 
     public boolean hasGreen() {
         return colors.indexOf("green") != -1;
+    }
+
+    public boolean sameColor(String otherPack) {
+        return colors.equals(otherPack);
+    }
+
+    public void addBooks() {
+        numBooks += 1;
+        System.out.println("You have added one book to your backpack. You now have: " + numBooks + " book(s) in your backpack.");
+        spaceLeft -= 60;
+        System.out.println("You have: " + spaceLeft + " cubic inches of space left in your backpack.");
+    }
+
+    public void putOnBag() {
+        if(isWorn == false) {
+            System.out.println("You have put on your backpack.");
+            isWorn = true;
+        }
+        else{
+            System.out.println("You are already wearing your backpack.");
+        }
     }
 
     
