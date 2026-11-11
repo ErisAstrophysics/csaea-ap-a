@@ -20,6 +20,12 @@ public class Robot {
         isOn = false;
     }
 
+    //Using the MATH library to create a method that randomly drains the battery
+    public void randomDrain() {
+        double drain = Math.random() * 10;
+        battery = Math.max(0, battery - drain);
+    }
+
     //GETTER / ACCESSOR: return type has to match the variable
     public String getName() {
         return name;
