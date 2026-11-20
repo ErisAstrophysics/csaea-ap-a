@@ -9,5 +9,15 @@ public class ArrayListsTester {
 
         int index = ArrayLists.findIndex(animals, "penguin");
         System.out.println(index);
+
+        ArrayLists.modifyAnimals(animals);
+
+        ArrayLists.replaceAll(animals, "giraffe", "cat");
+        System.out.println("Replaced Values ArrayList: " + animals);
+
+        ArrayLists.numberUtilities();
+        
+
+
     }
 }
