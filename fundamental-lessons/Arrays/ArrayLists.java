@@ -94,6 +94,92 @@ public class ArrayLists {
      * Tools:   for loop with index i, size(), get(i), a variable to remember the best index
      * */
 
+    public static void membershipCheck(ArrayList<String> animals) {
+        boolean found = false;
+        String target = "cat";
+        
+        for (int i = 0; i < animals.size(); i++) {
+            if (animals.get(i).equals(target)) {
+                found = true;
+            }
+        }
+
+        if (found == true) {
+            System.out.println("There's a cat in your Array!");
+        } else {
+            System.out.println("No cat.");
+        }
+    }
+
+    public static void copyList() {
+        ArrayList<Integer> original = new ArrayList<Integer>();
+        original.add(1);
+        original.add(2);
+        original.add(3);
+        original.add(4);
+
+        ArrayList<Integer> copied = new ArrayList<>();
+        for (int i = 0; i < original.size(); i++){
+            copied.add(original.get(i));
+        }
+
+        copied.add(5);
+
+        System.out.println("Original List: " + original);
+        System.out.println("Copied List: " + copied);
+    }
+
+    public static void removeShortNames(ArrayList<String> animals) {
+        for (int i = animals.size() - 1; i >= 0; i--) {
+            if (animals.get(i).length() <= 5) {
+                animals.remove(i);
+            }
+        }
+        System.out.println("Without Short Names: " + animals);
+    } 
+
+     /* ===== CHECKPOINT 3: Removing While Traversing =====
+     * CHALLENGE:
+     * Write removeAll(ArrayList<String> animals, String target) that removes EVERY copy of target.
+     * Use the same backward loop as removeShortNames, but match with .equals like findIndex.
+     * Example: [cat, dog, cat, emu], remove "cat"  ->  [dog, emu]
+     * Tools:   backward for loop, size(), get(i), remove(i), .equals()
+     *
+     */
+
+     public static void removeAll(ArrayList<String> animals, String target) {
+        for (int i = animals.size() - 1; i >= 0; i--){
+            if(animals.get(i).equals(target)){
+                animals.remove(i);
+            }
+        }
+        System.out.println("'" + target + "'" + " has been removed from animals.");
+     }
+
+    /* ===== CHECKPOINT 4: Putting It All Together =====
+     * CHALLENGE:
+     * Write longNames(ArrayList<String> animals) that RETURNS A NEW list of every name longer
+     * than the average name length. Along the way, print the longest name and whether
+     * "glass frog" is in the list. Use ONLY enhanced for loops.
+     * (Why can't you just remove the short names inside an enhanced for loop?)
+     * Example: [cat, pangolin, emu, glass frog]  ->  average 6.0, returns [pangolin, glass frog]
+     *          prints  Longest: glass frog   Has glass frog: true
+     * Tools:   enhanced for, accumulator, min/max tracking, boolean flag, .equals(),
+     *          (double) cast, building a new list with add(obj)
+     * Steps:   set up total = 0, longest = list.get(0), and hasFrog = false,
+     *          loop once to add each length to total, update longest, and flag "glass frog",
+     *          compute avg as a double AFTER the loop, make an empty result list,
+     *          loop a second time and add each name longer than avg, print longest and hasFrog,
+     *          return result
+     * Hint:    you need TWO loops -- you can't compare to the average until you've seen every name
+     *
+    */
+
+    // public static void longNames(ArrayList<String> animals){
+    //     int average = 
+
+    // }
+
  
 
 
